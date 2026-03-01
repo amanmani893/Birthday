@@ -179,17 +179,28 @@
         runAsync().start();
     })();
 setInterval(function(){
-   let heart=document.createElement("div");
-   heart.innerHTML="❤️";
-   heart.style.position="fixed";
-   heart.style.left=Math.random()*100+"vw";
-   heart.style.top="-10px";
-   heart.style.fontSize="24px";
+   let heart = document.createElement("div");
+   heart.innerHTML = "❤️";
+   heart.style.position = "fixed";
+   heart.style.left = Math.random() * 100 + "vw";
+   heart.style.top = "-20px";
+   heart.style.fontSize = "24px";
+   heart.style.transition = "top 4s linear";
    document.body.appendChild(heart);
 
-   setTimeout(()=>heart.remove(),4000);
-},500);
+   // move heart down
+   setTimeout(function(){
+       heart.style.top = "100vh";
+   }, 100);
+
+   // remove after falling
+   setTimeout(function(){
+       heart.remove();
+   }, 4000);
+
+}, 500);
     </script>
 </body>
 
 </html>
+
