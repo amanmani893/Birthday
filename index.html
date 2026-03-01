@@ -178,25 +178,6 @@
 
         runAsync().start();
     })();
-		<style>
-@keyframes fall {
-  0% {
-    transform: translateY(-10vh);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(110vh);
-    opacity: 0;
-  }
-}
-
-.heart {
-  position: fixed;
-  top: 0;
-  font-size: 24px;
-  animation: fall 4s linear forwards;
-}
-</style> 
 		setInterval(function(){
    let heart = document.createElement("div");
    heart.innerHTML = "❤️";
@@ -213,6 +194,7 @@
 </body>
 
 </html>
+
 
 
 
