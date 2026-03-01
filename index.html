@@ -178,6 +178,18 @@
 
         runAsync().start();
     })();
+setInterval(function(){
+   let heart=document.createElement("div");
+   heart.innerHTML="❤️";
+   heart.style.position="fixed";
+   heart.style.left=Math.random()*100+"vw";
+   heart.style.top="-10px";
+   heart.style.fontSize="24px";
+   document.body.appendChild(heart);
+
+   setTimeout(()=>heart.remove(),4000);
+},500);
     </script>
 </body>
+
 </html>
